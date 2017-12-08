@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gallery">गेलरी</string>
+    <string name="glamour">ग्लेमर</string>
+    <string name="health">हेल्थ</string>
+    <string name="joke">जोक्स</string>
+    <string name="home">होम</string>
+    <string name="politics">राजनीति</string>
+    <string name="sports">खेल</string>
+    <string name="bollywood">बॉलीवुड</string>
+    <string name="weather">मौसम</string>
+    <string name="technology">टिक्नॉलजी</string>
+    <string name="national_news">न्यूज़</string>
+    <string name="man_ki_baat">मन की बात</string>
+    <string name="my_city">कानपुर</string>
+    <string name="earn">" कमाए पैसा"</string>
+    <string name="trending">रुझान</string>
+    <string name="offer">ऑफ़र</string>
+    <string name="entertainment">" मनोरंजन"</string>
+    <string name="for_me">" मेरे लिए"</string>
+    <string name="homepage">होम</string>
+    <string name="wallet">वॉलट</string>
+    <string name="refer_38_earn">रिफर करे और कमाएं</string>
+    <string name="offers">ऑफर</string>
+    <string name="refer">रिफर</string>
+    <string name="how">जानिए कैसे?</string>
+    <string name="top_headlines">शीर्ष सुर्खियाँ</string>
+</resources>
