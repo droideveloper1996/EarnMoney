@@ -60,7 +60,7 @@ public class HomeFragment extends Fragment {
         imageUrl = new ArrayList<>();
         newsHeading = new ArrayList<>();
         newsBundle = new ArrayList<>();
- 
+
         recyclerView = (RecyclerView) v.findViewById(R.id.recycler_view);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setHasFixedSize(true);
