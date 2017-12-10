@@ -26,11 +26,12 @@
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-        <View
+
+        <ImageView
+            android:id="@+id/second_banner"
+            android:padding="4dp"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="8dp"
-            android:background="#cac1c1"
+            android:layout_height="match_parent"
             />
 
     </LinearLayout>

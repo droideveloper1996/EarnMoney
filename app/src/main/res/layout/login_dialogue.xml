@@ -46,12 +46,11 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/email_edit_text"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="80dp"
         android:adjustViewBounds="true"
         android:src="@drawable/news_logo"/>
 
     <Button
-        android:id="@+id/login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/password_edit_text"
@@ -60,14 +59,4 @@
         android:background="@drawable/rounded_text_view"
         android:text="Login"
         android:textColor="#f8f8f8"/>
-
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/google_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/login_button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        />
-
 </RelativeLayout>

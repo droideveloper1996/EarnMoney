@@ -156,7 +156,8 @@ public class MainActivity extends AppCompatActivity implements RewardedVideoAdLi
 
                         break;
                     case R.id.action_home:
-                        fragmentTransaction.replace(R.id.fragment_container, new HomeFragment()).commit();
+                      //   fragmentTransaction.replace(R.id.fragment_container, new HomeFragment()).commit();
+
                         break;
 
                 }
@@ -170,6 +171,8 @@ public class MainActivity extends AppCompatActivity implements RewardedVideoAdLi
         editor.putString("languageToLoad", "hi");
         editor.commit();
         setupTabTitle();
+
+        getSupportFragmentManager().popBackStack();
     }
 
     private void loadRewardedVideoAd() {
@@ -286,5 +289,10 @@ public class MainActivity extends AppCompatActivity implements RewardedVideoAdLi
         tabLayout.getTabAt(11).setText(getResources().getText(R.string.man_ki_baat));
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        return;
     }
 }

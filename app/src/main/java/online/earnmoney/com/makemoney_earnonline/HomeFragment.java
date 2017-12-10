@@ -10,7 +10,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,12 +32,13 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 import online.earnmoney.com.makemoney_earnonline.Adapters.RecyclerViewAdapter;
+import online.earnmoney.com.makemoney_earnonline.Adapters.RecyclerViewAdapter.ItemOnClickListner;
 
 /**
  * Created by Abhishek on 25/11/2017.
  */
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements ItemOnClickListner {
 
     private WebView webView;
     private AdView mAdView;
@@ -87,19 +87,18 @@ public class HomeFragment extends Fragment {
         firebaseDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                //newsBundle.clear();
+                newsBundle.clear();
                 if (dataSnapshot != null) {
                     for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
                         try {
                             NewsClass newsClass = dataSnapshot1.getValue(NewsClass.class);
-                            Log.i("Firebase", newsClass.getmNewsUrl());
                             newsBundle.add(newsClass);
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
 
                     }
-                    recyclerViewAdapter = new RecyclerViewAdapter(getContext(), newsBundle);
+                    recyclerViewAdapter = new RecyclerViewAdapter(getContext(), newsBundle, HomeFragment.this);
 
                     recyclerView.setAdapter(recyclerViewAdapter);
 
@@ -114,18 +113,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-   /*     firebaseDatabase.push().setValue("This is execution of Firebase").addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if (task.isSuccessful()) {
-                    Log.d("Firebase", "Execution Successful");
-                }
-            }
-        });*/
-
-        // Load ads into Interstitial Ads
         mInterstitialAd.loadAd(adRequest);
-
         mInterstitialAd.setAdListener(new AdListener() {
             public void onAdLoaded() {
                 showInterstitial();
@@ -139,6 +127,12 @@ public class HomeFragment extends Fragment {
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();
         }
+    }
+
+    @Override
+    public void onClick(int position) {
+
+
     }
 
     public static class BitcoinPriceReceiver extends BroadcastReceiver {
@@ -174,8 +168,6 @@ public class HomeFragment extends Fragment {
     }
 
     // Imports the Google Cloud client library
-
-
 
 
 }
