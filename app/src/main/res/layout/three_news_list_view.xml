@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
-              android:layout_height="match_parent"
+              android:layout_height="200dp"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="horizontal">
 
     <android.support.v7.widget.CardView
         android:layout_width="0dp"
+        app:cardCornerRadius="6dp"
+        android:layout_marginTop="2dp"
+        android:elevation="2dp"
         android:layout_height="wrap_content"
         android:layout_weight="1.5">
 
@@ -20,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
-                android:src="@drawable/zebpay_logo"
+
                 />
 
             <TextView
@@ -46,7 +50,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
-            android:src="@drawable/zebpay_logo"
+
             />
 
         <ImageView
@@ -55,7 +59,7 @@
             android:layout_height="125dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
-            android:src="@drawable/zebpay_logo"
+
             />
 
     </LinearLayout>

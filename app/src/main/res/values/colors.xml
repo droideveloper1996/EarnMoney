@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#00695C</color>
-    <color name="colorPrimaryDark">#00695C</color>
-    <color name="colorAccent">#FFEBEE</color>
+    <color name="colorPrimary">#880E4F</color>
+    <color name="colorPrimaryDark">#880E4F</color>
+    <color name="colorAccent">#FCE4EC</color>
 
 
 
     <color name="button_light">#ea1e63</color>
     <color name="background_green">#ea1e63</color>
     <color name="my_color">#FF4081</color>
+
+
+    <color name="progress_start">#f9f26b</color>
+    <color name="progress_end">#ea5f1e</color>
 </resources>

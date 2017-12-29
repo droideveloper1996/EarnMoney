@@ -26,6 +26,7 @@ public class NewsRecyclerViewAdapter extends RecyclerView.Adapter<NewsRecyclerVi
     ArrayList<NewsClass> newsClasses;
     public static OnItemClickListner itemClickListner;
 
+
     @Override
     public NewsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.three_news_list_view, parent, false);
@@ -36,9 +37,9 @@ public class NewsRecyclerViewAdapter extends RecyclerView.Adapter<NewsRecyclerVi
     @Override
     public void onBindViewHolder(NewsViewHolder holder, int position) {
 
-        Picasso.with(context).load(newsClasses.get(position).getmNewsUrl()).into(holder.primaryImageView);
-        Picasso.with(context).load(newsClasses.get(position).getmNewsUrl()).into(holder.SecondaryImageView);
-        Picasso.with(context).load(newsClasses.get(position).getmNewsUrl()).into(holder.thirdImageView);
+        Picasso.with(context).load(newsClasses.get(position).getmNewsUrl()).placeholder(R.drawable.image_avatar).into(holder.primaryImageView);
+        Picasso.with(context).load(newsClasses.get(position).getmNewsUrl()).placeholder(R.drawable.image_avatar).into(holder.SecondaryImageView);
+        Picasso.with(context).load(newsClasses.get(position).getmNewsUrl()).placeholder(R.drawable.image_avatar).into(holder.thirdImageView);
         holder.NewsTextView.setText(newsClasses.get(position).getmNewsHeading());
 
     }

@@ -48,7 +48,6 @@ public class Technology extends Fragment implements ItemOnClickListner {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         technologyRecyclerView.setHasFixedSize(true);
         technologyRecyclerView.setLayoutManager(linearLayoutManager);
-        recyclerViewAdapter = new RecyclerViewAdapter(getContext(), technology, Technology.this);
         technologyDatabaseReference = FirebaseDatabase.getInstance().getReference().child(ConstantUtils.TECHNOLOGY_KEY);
 
 
@@ -68,7 +67,7 @@ public class Technology extends Fragment implements ItemOnClickListner {
                         }
                     }
 
-                    recyclerViewAdapter=new RecyclerViewAdapter(getContext(),technology,Technology.this);
+                    recyclerViewAdapter=new RecyclerViewAdapter(getContext(),technology,Technology.this,ConstantUtils.TECHNOLOGY_VIEW_TYPE);
                     technologyRecyclerView.setAdapter(recyclerViewAdapter);
 
                 }
@@ -95,7 +94,7 @@ public class Technology extends Fragment implements ItemOnClickListner {
     }
 
     @Override
-    public void onClick(int position) {
+    public void onClick(int position,int index) {
         Toast.makeText(getContext(), Integer.toString(position), Toast.LENGTH_SHORT).show();
     }
 }

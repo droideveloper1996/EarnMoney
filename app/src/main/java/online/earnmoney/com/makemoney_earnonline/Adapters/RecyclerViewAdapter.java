@@ -20,17 +20,20 @@ import online.earnmoney.com.makemoney_earnonline.R;
  * Created by Abhishek on 08/12/2017.
  */
 
-public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
+
+    private int adapterType;
     private View view;
     public ItemOnClickListner itemOnClickListner;
     private Context mCtx;
     private ArrayList<NewsClass> newsBundle = new ArrayList<>();
 
-    public RecyclerViewAdapter(Context ctx, ArrayList<NewsClass> NewsBundle, ItemOnClickListner itemOnClickListner) {
+    public RecyclerViewAdapter(Context ctx, ArrayList<NewsClass> NewsBundle, ItemOnClickListner itemOnClickListner, int adapterType) {
         this.mCtx = ctx;
         this.newsBundle = NewsBundle;
         this.itemOnClickListner = itemOnClickListner;
+        this.adapterType = adapterType;
     }
 
     @Override
@@ -51,14 +54,14 @@ public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapt
         final int itemType = getItemViewType(position);
 
 
-        Picasso.with(mCtx).load(newsBundle.get(position).getmNewsUrl()).into(holder.imageView);
+        Picasso.with(mCtx).load(newsBundle.get(position).getmNewsUrl()).placeholder(R.drawable.image_avatar).into(holder.imageView);
         holder.textView.setText(newsBundle.get(position).getmNewsHeading());
 
 
     }
 
     public interface ItemOnClickListner {
-        void onClick(int position);
+        void onClick(int position, int section);
     }
 
     @Override
@@ -81,7 +84,10 @@ public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapt
         @Override
         public void onClick(View view) {
             int position = getAdapterPosition();
-            itemOnClickListner.onClick(position);
+
+            itemOnClickListner.onClick(position, adapterType);
         }
     }
+
+
 }

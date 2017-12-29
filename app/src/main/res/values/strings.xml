@@ -35,7 +35,7 @@
     <string name="for_me">For Me</string>
     <string name="offers">Offers</string>
     <string name="entertainment">Entertainment</string>
-
+    <string name="web_client_id" translatable="false">535025052310-c8kqv4465e97pu8qh5jfk6r98q5dp7da.apps.googleusercontent.com</string>
 
     <string name="order_id" translatable="false">Order Id : </string>
     <string name="customer_id" translatable="false">Customer Id : </string>
@@ -69,5 +69,32 @@
     <string name="how">How</string>
     <string name="top_headlines">Top HeadLines</string>
 
+    <string name="banner_ad_unit_id1" translatable="false">ca-app-pub-3020524047688446/4736728734</string>
+    <string name="banner_ad_unit_id2" translatable="false">ca-app-pub-3020524047688446/2608548401</string>
+    <string name="banner_ad_unit_id3" translatable="false">ca-app-pub-3020524047688446/8041548929</string>
+    <string name="news_bulletin">समाचार पत्रिका</string>
 
+    <string name="action_deep_link" translatable="false">
+        com.google.android.gms.samples.appinvite.DEEP_LINK_ACTION
+    </string>
+
+    <string name="invite" translatable="false">Send invitations!</string>
+    <string name="welcome" translatable="false">Invites</string>
+    <string name="referrer_hint" translatable="false">Deep link not provided</string>
+    <string name="deep_link_default" translatable="false">Deep link not set</string>
+    <string name="invitation_id_default" translatable="false">Invitation ID not set</string>
+    <string name="invite_friends" translatable="false">Invite Friends</string>
+
+    <string name="invitation_title" translatable="false">Send App Invite Quickstart Invitation</string>
+    <string name="invitation_message" translatable="false">This app is terrific, give it a try and get $5 off!</string>
+    <string name="invitation_deep_link" translatable="false">http://example.com/offer/five_dollar_offer</string>
+    <string name="invitation_custom_image" translatable="false">https://developers.google.com/identity/images/g-logo.png</string>
+    <string name="invitation_cta" translatable="false">Install!</string>
+
+    <string name="deep_link_fmt" formatted="false" translatable="false">Deep Link: %s</string>
+
+    <string name="send_failed" translatable="false">Sending invitations failed</string>
+    <string name="invite_dialog_title" translatable="false">You got an invitation!</string>
+
+    <string name="google_play_services_error" translatable="false">Google Play Services Error</string>
 </resources>

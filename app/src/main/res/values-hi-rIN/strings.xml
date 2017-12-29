@@ -6,7 +6,7 @@
     <string name="joke" translatable="true">जोक्स</string>
     <string name="bollywood" translatable="true">बॉलीवुड</string>
     <string name="weather" translatable="true">मौसम</string>
-    <string name="technology" translatable="true">टिक्नॉलजी</string>
+    <string name="technology" translatable="true">टैकनोलजी</string>
     <string name="national_news" translatable="true">न्यूज़</string>
     <string name="man_ki_baat" translatable="true">मन की बात</string>
     <string name="my_city" translatable="true">कानपुर</string>
@@ -25,4 +25,5 @@
     <string name="politics">राजनीति</string>
     <string name="sports">खेल</string>
     <string name="top_headlines">शीर्ष सुर्खियाँ</string>
+    <string name="news_bulletin">समाचार पत्रिका</string>
 </resources>

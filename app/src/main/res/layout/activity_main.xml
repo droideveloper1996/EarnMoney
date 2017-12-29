@@ -95,6 +95,7 @@
                     android:layout_gravity="bottom"
                     android:elevation="5dp"
                     app:elevation="8dp"
+                    android:background="#f8f8f8"
                     app:menu="@menu/bottom_menu"/>
             </android.support.design.widget.CoordinatorLayout>
 

@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00be9c"
+    android:background="@color/colorPrimary"
     android:orientation="vertical">
 
 
@@ -23,7 +23,7 @@
         android:textColorHint="#f7f7f7"
         android:textSize="14.5sp"/>
 
-    <TextView
+    <EditText
         android:id="@+id/password_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,6 +31,7 @@
         android:layout_gravity="center_horizontal|center_vertical"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:inputType="textPassword"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_edit_text"
         android:hint="Password "

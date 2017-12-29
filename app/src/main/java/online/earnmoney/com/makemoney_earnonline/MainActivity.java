@@ -34,8 +34,10 @@ import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.dynamiclinks.FirebaseDynamicLinks;
 import com.google.firebase.dynamiclinks.PendingDynamicLinkData;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.squareup.picasso.Picasso;
 
 import java.util.Locale;
@@ -43,6 +45,8 @@ import java.util.Locale;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity implements RewardedVideoAdListener {
+
+
     TabLayout tabLayout;
     private static final String TAG = "";
     private RewardedVideoAd rewardedVideoAd;
@@ -55,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements RewardedVideoAdLi
     CircleImageView my_image;
     LayoutInflater layoutInflater;
     BottomNavigationView bottomNavigationView;
+    FirebaseAuth.AuthStateListener authStateListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements RewardedVideoAdLi
         setSupportActionBar(toolbar);
         toolbarTitleTextView = (TextView) findViewById(R.id.toolbartext);
 
+        FirebaseInstanceId.getInstance().getToken();
 
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation_view);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
@@ -116,13 +122,6 @@ public class MainActivity extends AppCompatActivity implements RewardedVideoAdLi
                             deepLink = pendingDynamicLinkData.getLink();
                         }
 
-
-                        // Handle the deep link. For example, open the linked
-                        // content, or apply promotional credit to the user's
-                        // account.
-                        // ...
-
-                        // ...
                     }
                 })
                 .addOnFailureListener(this, new OnFailureListener() {
@@ -156,7 +155,7 @@ public class MainActivity extends AppCompatActivity implements RewardedVideoAdLi
 
                         break;
                     case R.id.action_home:
-                      //   fragmentTransaction.replace(R.id.fragment_container, new HomeFragment()).commit();
+                        //   fragmentTransaction.replace(R.id.fragment_container, new HomeFragment()).commit();
 
                         break;
 

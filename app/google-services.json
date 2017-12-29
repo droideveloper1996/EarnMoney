@@ -15,11 +15,27 @@
       },
       "oauth_client": [
         {
-          "client_id": "535025052310-c8kqv4465e97pu8qh5jfk6r98q5dp7da.apps.googleusercontent.com",
+          "client_id": "535025052310-b85rhk17fcfiis0jhv557lgj004vfo3s.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "online.earnmoney.com.makemoney_earnonline",
             "certificate_hash": "c36607ae9e2728bcdf1085288c3374f7dd2aa202"
+          }
+        },
+        {
+          "client_id": "535025052310-dmjsc70n98in5qgrr3ghu6o43liu7phe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "online.earnmoney.com.makemoney_earnonline",
+            "certificate_hash": "6bcd8eb2c6770cb0e4870c7bfed9d8414788aa05"
+          }
+        },
+        {
+          "client_id": "535025052310-6mhmir6e2srfean2ofnmbmbprh56hhom.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "online.earnmoney.com.makemoney_earnonline",
+            "certificate_hash": "cc0a0f303435b1b48a9a0b13c23ccbdd6c78c16f"
           }
         },
         {
